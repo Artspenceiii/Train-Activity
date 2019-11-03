@@ -1,6 +1,13 @@
 $(document).ready(function(){
 	// 1. Link to Firebase
-	var trainData = new Firebase("https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js/");
+	var trainData = {
+		apiKey: "AIzaSyAPUN2aNrPOOd8UZoXYml974WDEfJulHCU",
+		authDomain: "train-schedule-5f565.firebaseapp.com",
+		databaseURL: "https://train-schedule-5f565.firebaseio.com",
+		projectId: "train-schedule-5f565",
+		storageBucket: "",
+		messagingSenderId: "232587175674"
+	};
 
 	// 2. Button for adding Trains
 	$("#addTrainBtn").on("click", function(){
@@ -20,7 +27,7 @@ $(document).ready(function(){
 		// Creates local "temporary" object for holding train data
 		// Will push this to firebase
 		var newTrain = {
-			name:  trainName,
+			name: trainName,
 			destination: destination,
 			trainTime: trainTimeInput,
 			frequency: frequencyInput,
